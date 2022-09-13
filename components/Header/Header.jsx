@@ -26,7 +26,7 @@ import {
     faFacebookF,
     faGoodreadsG,
     faLinkedinIn,
-} from "@fortawesome/fontawesome-free-brands";
+} from "@fortawesome/free-brands-svg-icons";
 
 const HEADER_MENU_ITEMS = [
     { id: "aboutme", label: "about", href: "/about" },
