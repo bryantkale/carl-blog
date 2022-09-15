@@ -3,8 +3,8 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 
-import Link from 'next/link';
-import Date from '../components/date';
+import Link from "next/link";
+import Date from "../components/date";
 
 export default function About({ allPostsData }) {
 	return (
@@ -37,7 +37,6 @@ export default function About({ allPostsData }) {
 					))}
 				</ul>
 			</section>
-
 		</Layout>
 	);
 }
