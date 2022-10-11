@@ -1,27 +1,23 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/utils.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { Header } from "./Header";
 import Footer from "./Footer/Footer";
 import { Container } from "@mui/material";
 
-const name = "Carl";
 export const siteTitle = "CNB";
 
 export default function DefaultLayout({ children, home }) {
-	return (
-		<>
-			<Container
-				sx={{
-					backgroundColor: "background.default",
-					minHeight: "100vh",
-					padding: "0 0.5rem",
-				}}
-			>
-				<Header />
-				{/* <Head>
+  return (
+    <>
+      <Container
+        sx={{
+          backgroundColor: "background.default",
+          minHeight: "100vh",
+          padding: "0 0.5rem",
+        }}
+      >
+        <Header />
+        {/* <Head>
 				<link rel="icon" href="/favicon.ico" />
 				<meta
 					name="description"
@@ -37,16 +33,16 @@ export default function DefaultLayout({ children, home }) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head> */}
 
-				<main>{children}</main>
-				{!home && (
-					<div className={styles.backToHome}>
-						<Link href="/">
-							<a>← Back to home</a>
-						</Link>
-					</div>
-				)}
-			</Container>
-			<Footer />
-		</>
-	);
+        <main>{children}</main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
+      </Container>
+      <Footer />
+    </>
+  );
 }
