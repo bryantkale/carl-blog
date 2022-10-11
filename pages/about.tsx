@@ -62,7 +62,7 @@ export default function About() {
       <Box>
         <Stack direction="column" spacing={2} className={utilStyles.headingMd}>
           <Typography variant="body1">
-            Hi I&aposm Carl. I&aposm a fullstack web engineer residing in
+            Hi I&apos;m Carl. I&apos;m a fullstack web engineer residing in
             Boston, MA. I enjoy working in React, Angular, Python, and whatever
             else comes my way.
           </Typography>
