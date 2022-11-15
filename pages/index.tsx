@@ -1,156 +1,85 @@
+import { Stack, Typography } from "@mui/material";
+import Link from "next/link";
+import {
+  DEFAULT_FACEBOOK_URL,
+  DEFAULT_GITHUB_URL,
+  DEFAULT_GOOD_READS_URL,
+  DEFAULT_INSTAGRAM_URL,
+  DEFAULT_LINKEDIN_URL,
+} from "../components/constants";
+
+const SOCIAL_MEDIA_ITEMS = [
+  {
+    id: "insta",
+    label: "Instagram",
+    href: DEFAULT_INSTAGRAM_URL,
+    target: "_blank",
+  },
+  {
+    id: "linkedin",
+    label: "Linkedin",
+    href: DEFAULT_LINKEDIN_URL,
+    target: "_blank",
+  },
+  {
+    id: "facebook",
+    label: "Facebook",
+    href: DEFAULT_FACEBOOK_URL,
+    target: "_blank",
+  },
+  {
+    id: "goodreads",
+    label: "Good Reads",
+    href: DEFAULT_GOOD_READS_URL,
+    target: "_blank",
+  },
+  {
+    id: "github",
+    label: "Github",
+    href: DEFAULT_GITHUB_URL,
+    target: "_blank",
+  },
+];
+
 export default function AppHome() {
   return (
-    <div className="container">
+    <>
+      <header>
+        <Typography variant="h2">Caelin Bryant</Typography>
+      </header>
       <main>
-        <h1 className="title">Welcome</h1>
-        <h2 className="title">I am a WIP</h2>
+        <Stack spacing={4} direction="column">
+          <Typography sx={{ textAlign: "center" }}>
+            。゜゜(´Ｏ`) ゜゜。
+          </Typography>
+          <Typography variant="body1">
+            Hi I&apos;m Caelin/Carl. I&apos;m a fullstack web engineer with a
+            focus in frontend. I reside in in Boston, MA. I enjoy working in
+            React, Angular, Python, and else comes my way. I spend most of my
+            time with my wonderful 7 year old dog named Katie!
+          </Typography>
+          <Typography variant="body1">
+            I train at Esh Circus Arts in Somerville, MA, where I develop my
+            contortion, handbalancing, and aerials skills. Currently, I&apos;m
+            working on my aerial rope skills.
+          </Typography>
+          <Typography variant="body1">
+            I have my 200 hour Yoga Teacher Training Certification and you can
+            find me practicing outside on a beautiful sunny day. Nowadays, I
+            train at various studios across South End/Back Bay (Down Under Yoga,
+            The Studio, etc).
+          </Typography>
+        </Stack>
+        <aside>
+          <ul>
+            {SOCIAL_MEDIA_ITEMS.map((social) => (
+              <li key={social.id}>
+                <Link href={social.href}>{social.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </main>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </>
   );
 }

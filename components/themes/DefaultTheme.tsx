@@ -1,46 +1,45 @@
 import createTheme from "@mui/material/styles/createTheme";
-
 export const DefaultTheme = createTheme({
   typography: {
     h1: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: "bold",
       color: "#151515",
     },
     h2: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: "bold",
       color: "#151515",
     },
     h3: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: "bold",
       color: "#151515",
     },
     h4: {
       fontSize: "34px",
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: 600,
       lineHeight: "42px",
       color: "#151515",
     },
     h5: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: "bold",
       color: "#151515",
     },
     h6: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontSize: "20px",
       fontWeight: 400,
       lineHeight: "32px",
       color: "#151515",
     },
     subtitle2: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
     },
     body1: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
       fontWeight: 400,
     },
     button: {
@@ -55,11 +54,10 @@ export const DefaultTheme = createTheme({
       color: "#9A9A9A",
     },
     allVariants: {
-      fontFamily: ["Arial", "serif"].join(", "),
+      fontFamily: ["'EB Garamond', serif;"].join(", "),
     },
   },
   palette: {
-    // type: 'light',
     primary: {
       main: "#ff9090",
     },

@@ -6,7 +6,7 @@ import DefaultLayout from "../components/DefaultLayout";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <DefaultLayout home>
+      <DefaultLayout>
         <Component {...pageProps} />
       </DefaultLayout>
     </ThemeProvider>
