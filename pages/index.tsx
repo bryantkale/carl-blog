@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import {
   DEFAULT_FACEBOOK_URL,
@@ -47,39 +47,59 @@ export default function AppHome() {
       <header>
         <Typography variant="h2">Caelin Bryant</Typography>
       </header>
-      <main>
-        <Stack spacing={4} direction="column">
-          <Typography sx={{ textAlign: "center" }}>
-            。゜゜(´Ｏ`) ゜゜。
-          </Typography>
-          <Typography variant="body1">
-            Hi I&apos;m Caelin/Carl. I&apos;m a fullstack web engineer with a
-            focus in frontend. I reside in in Boston, MA. I enjoy working in
-            React, Angular, Python, and else comes my way. I spend most of my
-            time with my wonderful 7 year old dog named Katie!
-          </Typography>
-          <Typography variant="body1">
-            I train at Esh Circus Arts in Somerville, MA, where I develop my
-            contortion, handbalancing, and aerials skills. Currently, I&apos;m
-            working on my aerial rope skills.
-          </Typography>
-          <Typography variant="body1">
-            I have my 200 hour Yoga Teacher Training Certification and you can
-            find me practicing outside on a beautiful sunny day. Nowadays, I
-            train at various studios across South End/Back Bay (Down Under Yoga,
-            The Studio, etc).
-          </Typography>
-        </Stack>
-        <aside>
-          <ul>
-            {SOCIAL_MEDIA_ITEMS.map((social) => (
-              <li key={social.id}>
-                <Link href={social.href}>{social.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      </main>
+
+      <Stack spacing={4} direction="column">
+        <Typography sx={{ textAlign: "center" }}>
+          。゜゜(´Ｏ`) ゜゜。
+        </Typography>
+        <Typography variant="body1">
+          Hi I&apos;m Caelin/Carl. I&apos;m a fullstack web engineer with a
+          focus in frontend. I reside in in Boston, MA. I enjoy working in
+          React, Angular, Python, and else comes my way. I spend most of my time
+          with my wonderful 7 year old dog named Katie!
+        </Typography>
+        <Typography variant="body1">
+          I train at Esh Circus Arts in Somerville, MA, where I develop my
+          contortion, handbalancing, and aerials skills. Currently, I&apos;m
+          working on my aerial rope skills.
+        </Typography>
+        <Typography variant="body1">
+          I have my 200 hour Yoga Teacher Training Certification and you can
+          find me practicing outside on a beautiful sunny day. Nowadays, I train
+          at various studios across South End/Back Bay (Down Under Yoga, The
+          Studio, etc).
+        </Typography>
+      </Stack>
+
+      <Stack
+        sx={{ display: "flex", flexGrow: 1, overflow: "hidden" }}
+        direction={{ sm: "column", md: "row" }}
+        spacing={{ sm: 2 }}
+      >
+        {SOCIAL_MEDIA_ITEMS.map((social) => (
+          <Button
+            variant="outlined"
+            key={social.id}
+            sx={{
+              width: "100%",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              backgroundColor: "plum",
+              border: "double black",
+            }}
+          >
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "#55171d",
+              }}
+              href={social.href}
+            >
+              {social.label}
+            </Link>
+          </Button>
+        ))}
+      </Stack>
     </>
   );
 }

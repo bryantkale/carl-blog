@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
+    "cursor-effects": "^1.0.7",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "^13.0.3",
