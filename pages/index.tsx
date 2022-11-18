@@ -1,5 +1,4 @@
 import { Button, Stack, Typography } from "@mui/material";
-import Link from "next/link";
 import {
   DEFAULT_FACEBOOK_URL,
   DEFAULT_GITHUB_URL,
@@ -7,6 +6,7 @@ import {
   DEFAULT_INSTAGRAM_URL,
   DEFAULT_LINKEDIN_URL,
 } from "../components/constants";
+import Header from "../components/Header/Header";
 
 const SOCIAL_MEDIA_ITEMS = [
   {
@@ -44,9 +44,7 @@ const SOCIAL_MEDIA_ITEMS = [
 export default function AppHome() {
   return (
     <>
-      <header>
-        <Typography variant="h2">Caelin Bryant</Typography>
-      </header>
+      <Header title="Caelin Bryant" />
 
       <Stack spacing={4} direction="column">
         <Typography sx={{ textAlign: "center" }}>
@@ -72,31 +70,26 @@ export default function AppHome() {
       </Stack>
 
       <Stack
-        sx={{ display: "flex", flexGrow: 1, overflow: "hidden" }}
+        sx={{ display: "flex" }}
         direction={{ sm: "column", md: "row" }}
         spacing={{ sm: 2 }}
       >
         {SOCIAL_MEDIA_ITEMS.map((social) => (
           <Button
+            href={social.href}
+            target={social.target}
             variant="outlined"
             key={social.id}
+            fullWidth
             sx={{
-              width: "100%",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              backgroundColor: "plum",
+              backgroundColor: "tomato",
+              textAlign: "center",
               border: "double black",
+              textDecoration: "none",
+              color: "#55171d",
             }}
           >
-            <Link
-              style={{
-                textDecoration: "none",
-                color: "#55171d",
-              }}
-              href={social.href}
-            >
-              {social.label}
-            </Link>
+            {social.label}
           </Button>
         ))}
       </Stack>

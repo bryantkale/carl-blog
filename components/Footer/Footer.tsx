@@ -4,9 +4,6 @@ export default function Footer() {
   return (
     <Container
       sx={{
-        // width: "100%",
-        // height: "100px",
-        // borderTop: "1px solid #eaeaea",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

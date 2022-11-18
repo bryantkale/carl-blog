@@ -1,7 +1,5 @@
 import { Container } from "@mui/material";
 
-export const siteTitle = "CNB";
-
 export default function DefaultLayout({ children }) {
   return (
     <Container

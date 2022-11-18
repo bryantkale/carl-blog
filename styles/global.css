@@ -2,28 +2,16 @@ body {
   background-color: #3e4198;
   margin-top: 10%;
   margin-bottom: 10%;
+  width: 100%;
+
 }
 
 div {
   background-color: skyblue;
-  width: 60%;
+  /* effecting iphone sizing */
   color: black;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
+  padding: 30px;
   border: 5px dashed black;
-  font-family: serif;
-  font-size: 13pt;
-}
-
-header {
-  text-align: center;
-  margin: 42px;
-  font-family: 'EB Garamond', cursive;
-}
-
-h1 {
-  font-size: 40pt;
-  font-family: 'EB Garamond', cursive;
-  color: white;
 }
