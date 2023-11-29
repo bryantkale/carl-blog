@@ -21,7 +21,6 @@
   },
   "plugins": [
     "@typescript-eslint",
-    // "simple-import-sort",
     "unused-imports",
     "prettier",
     "@next/eslint-plugin-next"
@@ -41,19 +40,5 @@
         "argsIgnorePattern": "^_"
       }
     ]
-    // "simple-import-sort/imports": [
-    //   "warn",
-    //   {
-    //     "groups": [
-    //       ["^react$"],
-    //       ["reflect-metadata$"],
-    //       ["^@mui"],
-    //       ["^\\w"],
-    //       ["^@\\w"],
-    //       ["^\\..\\/"],
-    //       ["^\\.\\/"]
-    //     ]
-    //   }
-    // ]
   }
 }

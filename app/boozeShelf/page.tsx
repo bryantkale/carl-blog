@@ -1,6 +1,4 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWineBottle } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -70,9 +68,7 @@ export default function Page() {
       <div>Wine Fridge</div>
       {MENU.map(({ name }) => (
         <ul key={id}>
-          <li>
-            <FontAwesomeIcon icon={faWineBottle} />
-          </li>
+          <li>{name}</li>
         </ul>
       ))}
       <div>Bar</div>
